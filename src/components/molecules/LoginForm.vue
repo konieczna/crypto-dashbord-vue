@@ -37,7 +37,7 @@ export default {
         }
     },
     methods: {
-        validateForm() {
+        validateForm() { // auth TODO
             this.formIsValid = false;
             if(this.user.val === 'user123') {
                 this.user.isValid = true;

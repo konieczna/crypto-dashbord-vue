@@ -8,7 +8,6 @@
                     <h1>{{ getCoinFullName ? getCoinFullName : getCoinName }} <span class="font-weight-300">{{ getCoinName }}</span></h1>
                 </div>
                 <div class="coin-detail__details">
-                    <!-- <h2>Details</h2> -->
                     <base-small-text>Price</base-small-text>
                     <p>{{ getCoinBidPrice }} USD</p>
                     <base-small-text>Last 24h</base-small-text>
@@ -44,9 +43,7 @@ export default {
             return '/';
         },
         getCoinName() {
-            // return this.selectedCoin.name;
             return this.$store.getters.coins[this.id].name;
-        // },
         },
         getCoinFullName() {
             return this.$store.getters.coins[this.id].fullName;
@@ -66,17 +63,11 @@ export default {
     },
     created() {
         this.loadCoins();
-        // this.getCoin();
     },
     methods: {
         loadCoins() {
             this.$store.dispatch('loadCoins');
         },
-        // getCoin() {
-        //     this.selectedCoin = this.$store.getters.coins.find(coin => coin.id == this.id);
-        //     console.log(this.$store.getters.coins);
-        //     console.log(this.$store.getters.coins.find(coin => console.log(coin.id + this.id)));
-        // }
     },
 }
 </script>

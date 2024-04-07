@@ -4,19 +4,7 @@
     </span>
 </template>
 
-<style scoped>
-    span {
-        text-transform: uppercase;
-        font-size: 13px;
-        color: var(--global-light-gray);
-    }
-    .d-block {
-        display: block;
-    }
-</style>
-
 <script>
-
 export default {
     props: {
         mode: {
@@ -27,3 +15,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    span {
+        text-transform: uppercase;
+        font-size: 13px;
+        color: var(--global-light-gray);
+    }
+    .d-block {
+        display: block;
+    }
+</style>

@@ -1,11 +1,18 @@
 <template>
     <section>
-      <base-card>
-        <h2>Page not found</h2>
+        <h1>Page not found</h1>
         <p>
           This page could not be found - go back to
           <router-link to="/">homepage</router-link>.
         </p>
-      </base-card>
     </section>
   </template>
+
+<style scoped>
+p {
+  text-align: center;
+}
+a {
+    text-decoration: underline;
+}
+</style>

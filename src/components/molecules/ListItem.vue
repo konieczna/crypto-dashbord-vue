@@ -34,7 +34,7 @@ export default {
     props: ['id', 'name', 'img', 'bidPrice', 'priceChangePercent'],
     computed: {
         coinLink() {
-            return '/' + this.id;
+            return '/coin/' + this.id;
         },
     }
 }

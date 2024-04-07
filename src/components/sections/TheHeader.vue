@@ -24,6 +24,26 @@
     </header>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            isToggled: false
+        }
+    },
+    computed: {
+        isLoggedIn() {
+            return this.$store.getters.isLoggedIn;
+        }
+    },
+    methods: {
+        toggleNav() {
+            this.isToggled === true ? this.isToggled = false : this.isToggled = true;
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
     .container {
         display: flex;
@@ -110,24 +130,3 @@
     }
 
 </style>
-
-<script>
-export default {
-    data() {
-        return {
-            isToggled: false
-        }
-    },
-    computed: {
-        isLoggedIn() {
-            return this.$store.getters.isLoggedIn;
-        }
-    },
-    methods: {
-        toggleNav() {
-            this.isToggled === true ? this.isToggled = false : this.isToggled = true;
-            console.log(this.isToggled);
-        }
-    }
-}
-</script>

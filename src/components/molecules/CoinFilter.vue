@@ -16,9 +16,6 @@
 
 <script>
     export default {
-        data() {
-            
-        },
         computed: {
             coinsList() {
                 return this.$store.getters.coins;
@@ -32,5 +29,4 @@
             }
         }
     }
-
 </script>

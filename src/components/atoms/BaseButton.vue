@@ -9,6 +9,28 @@
     </div>
 </template>
 
+<script>
+export default {
+    props: {
+        mode: {
+            type: String,
+            required: false,
+            default: null
+        },
+        link: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        to: {
+            type: String,
+            required: false,
+            default: '/'
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
     button, a {
         cursor: pointer;
@@ -39,48 +61,24 @@
             position: relative;
             color: var(--global-primary);
             padding-left: 20px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) rotate(-90deg);
+                width: 14px;
+                height: 14px;
+                background: var(--global-primary);
+                -webkit-mask: url('../../assets/icons/arrow.svg') no-repeat center;
+                mask: url('../../assets/icons/arrow.svg') no-repeat center;
+                transition: .3s;
+            }
+            &:hover {
                 &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%) rotate(-90deg);
-                    width: 14px;
-                    height: 14px;
-                    background: var(--global-primary);
-                    -webkit-mask: url('../../assets/icons/arrow.svg') no-repeat center;
-                    mask: url('../../assets/icons/arrow.svg') no-repeat center;
-                    transition: .3s;
+                    left: -4px;
                 }
-                &:hover {
-                    &::before {
-                        left: -4px;
-                    }
-                }
+            }
         }
     }
 </style>
-
-<script>
-
-export default {
-    props: {
-        mode: {
-            type: String,
-            required: false,
-            default: null
-        },
-        link: {
-            type: Boolean,
-            required: false,
-            default: false
-        },
-        to: {
-            type: String,
-            required: false,
-            default: '/'
-        }
-    }
-}
-</script>
-

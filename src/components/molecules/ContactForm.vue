@@ -80,9 +80,6 @@ export default {
             if(this.message.val === '') {
                 this.message.isValid = false;
             }
-            console.log(this.name.isValid);
-            console.log(this.email.isValid);
-            console.log(this.message.isValid);
             if(this.name.isValid == true && this.email.isValid == true && this.message.isValid == true ) {
                 this.formIsValid = true;
             }
